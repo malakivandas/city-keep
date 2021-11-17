@@ -1,0 +1,25 @@
+{
+  "name": "citizen-app",
+  "version": "1.0.0",
+  "description": "This app is for the reporting of non-emergency civic issues to a centralized database.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malakivandas/citizen-app.git"
+  },
+  "author": "Malaki Vandas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malakivandas/citizen-app/issues"
+  },
+  "homepage": "https://github.com/malakivandas/citizen-app#readme",
+  "scripts": {
+    "postinstall": "cd client && npm install && cd ../server && npm install",
+    "client": "npm start --prefix client",
+    "server": "npm run server --prefix server",
+    "start": "concurrently \"npm run client\" \"npm run server\""
+  },
+  "dependencies": {
+    "concurrently": "^6.4.0"
+  }
+}

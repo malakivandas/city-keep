@@ -1,6 +1,7 @@
 #----------- ROOT -----------#
 
 node_modules
+.vscode
 
 #---------- SERVER ----------#
 

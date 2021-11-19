@@ -19,7 +19,7 @@
     "server": "npm run server --prefix server",
     "start": "concurrently \"npm run client\" \"npm run server\""
   },
-  "dependencies": {
+  "devDependencies": {
     "concurrently": "^6.4.0"
   }
 }

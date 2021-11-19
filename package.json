@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/malakivandas/citizen-app#readme",
   "scripts": {
-    "postinstall": "cd client && npm install && cd ../server && npm install",
+    "postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
     "client": "npm start --prefix client",
     "server": "npm run server --prefix server",
     "start": "concurrently \"npm run client\" \"npm run server\""

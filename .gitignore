@@ -2,6 +2,7 @@
 
 node_modules
 .vscode
+git-and-console.code-workspace
 
 #---------- SERVER ----------#
 

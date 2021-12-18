@@ -1,5 +1,3 @@
-CREATE DATABASE citizenapp;
-
 CREATE TABLE users (
   id SERIAL PRIMARY KEY NOT NULL,
   last_name VARCHAR(50) NOT NULL,

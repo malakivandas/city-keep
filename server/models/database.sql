@@ -3,6 +3,7 @@ CREATE TABLE users (
   last_name VARCHAR(50) NOT NULL,
   first_name VARCHAR(50) NOT NULL,
   email VARCHAR(255) UNIQUE NOT NULL,
+  password VARCHAR(50) NOT NULL,
   city VARCHAR(50) NOT NULL,
   state_province VARCHAR(50) NOT NULL,
   country VARCHAR(50) NOT NULL
@@ -31,7 +32,7 @@ CREATE TABLE images (
   UNIQUE (report_id, image_url)
 );
 
-INSERT INTO users (last_name, first_name, email, city, state_province, country) VALUES ('Last', 'First', 'test@test.com', 'Vancouver', 'BC', 'Canada');
+INSERT INTO users (last_name, first_name, email, password, city, state_province, country) VALUES ('Last', 'First', 'test@test.com', 'test', 'Vancouver', 'BC', 'Canada');
 
 INSERT INTO categories (id, label) VALUES (1, 'Drainage/Flooding');
 INSERT INTO categories (id, label) VALUES (2, 'Graffiti/Vandalism');

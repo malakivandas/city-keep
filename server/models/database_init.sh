@@ -2,7 +2,7 @@
 
 # Prerequisites
 psql -V
-pg_isready
+service postgresql status
 
 # Postgres commands
 psql -U postgres -c 'CREATE DATABASE citizenapp;' -c '\c citizenapp' -c '\i ./database.sql'

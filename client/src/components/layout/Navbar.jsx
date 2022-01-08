@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
       <Toolbar>
-        <StyledLink to="/">
+        <StyledLink to="/reports">
           <IconButton color="inherit">
             <MenuIcon />
           </IconButton>

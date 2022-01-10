@@ -9,6 +9,7 @@ import NoAuthOutlet from './components/routing/NoAuthOutlet';
 import ReportsPage from './components/pages/ReportsPage';
 import SettingsPage from './components/pages/SettingsPage';
 import LandingPage from './components/pages/LandingPage';
+import ForgotPassword from './components/pages/ForgotPassword';
 
 function App() {
   const isAuthenticated = false;
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route element={<NoAuthOutlet isAuthenticated={isAuthenticated} />}>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/forgotpassword" element={<ForgotPassword />} />
         </Route>
         <Route element={<AuthOutlet isAuthenticated={isAuthenticated} />}>
           <Route path="reports" element={<ReportsPage />} />

@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import { Typography } from '@mui/material';
 
 export default function SignIn() {
   const handleSubmit = (event) => {
@@ -53,8 +55,8 @@ export default function SignIn() {
         >
           Sign In
         </Button>
-        <Link href="forgotpassword" variant="body2">
-          Forgot password?
+        <Link to="/forgotpassword">
+          <Typography variant="body2">Forgot Password?</Typography>
         </Link>
       </Box>
     </Container>

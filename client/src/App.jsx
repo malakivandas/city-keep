@@ -15,7 +15,7 @@ function App() {
 
   return (
     <Router>
-      <Heading />
+      {!isAuthenticated && <Heading />}
       <Routes>
         <Route element={<NoAuthOutlet isAuthenticated={isAuthenticated} />}>
           <Route path="/" element={<LandingPage />} />

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import { AppBar, Toolbar, IconButton, Box, Fab } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -16,30 +15,20 @@ const StyledFab = styled(Fab)({
   margin: '0 auto',
 });
 
-const StyledLink = styled(Link)({
-  textDecoration: 'none',
-  color: 'inherit',
-});
-
 export default function Navbar() {
   return (
     <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
       <Toolbar>
-        <StyledLink to="/reports">
-          <IconButton color="inherit">
-            <MenuIcon />
-          </IconButton>
-        </StyledLink>
-
+        <IconButton href="/reports" color="inherit">
+          <MenuIcon />
+        </IconButton>
         <StyledFab color="secondary">
           <AddIcon />
         </StyledFab>
         <Box sx={{ flexGrow: 1 }} />
-        <StyledLink to="/settings">
-          <IconButton color="inherit">
-            <SettingsIcon />
-          </IconButton>
-        </StyledLink>
+        <IconButton href="/settings" color="inherit">
+          <SettingsIcon />
+        </IconButton>
       </Toolbar>
     </AppBar>
   );

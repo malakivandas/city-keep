@@ -7,24 +7,20 @@ import SignIn from '../auth/SignIn';
 import SignUp from '../auth/SignUp';
 
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+  const { children, value, ...other } = props;
 
   return (
     <div
       role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      <Box sx={{ p: 3 }}>{children[value]}</Box>
     </div>
   );
 }
 
 TabPanel.propTypes = {
   children: PropTypes.node,
-  index: PropTypes.number.isRequired,
   value: PropTypes.number.isRequired,
 };
 
@@ -42,10 +38,8 @@ export const LandingPage = () => {
           <Tab label="Sign In"></Tab>
           <Tab label="Sign Up"></Tab>
         </Tabs>
-        <TabPanel value={value} index={0}>
+        <TabPanel value={value}>
           <SignIn />
-        </TabPanel>
-        <TabPanel value={value} index={1}>
           <SignUp />
         </TabPanel>
       </Grid>

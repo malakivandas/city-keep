@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme.jsx';
@@ -12,25 +12,30 @@ import ReportsPage from './components/pages/ReportsPage';
 import SettingsPage from './components/pages/SettingsPage';
 import LandingPage from './components/pages/LandingPage';
 import ForgotPassword from './components/pages/ForgotPassword';
+import AuthSwitch from './components/dev/AuthSwitch.jsx';
 
 function App() {
-  const isAuthenticated = true;
+  const [auth, setAuth] = useState(false);
+  const handleAuth = (event) =>{
+    setAuth(event.target.checked);
+  }
 
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        {!isAuthenticated && <Heading />}
+        {!auth && <Heading />}
+        <AuthSwitch checked={auth} onChange={handleAuth}/>
         <Routes>
-          <Route element={<NoAuthOutlet isAuthenticated={isAuthenticated} />}>
+          <Route element={<NoAuthOutlet isAuthenticated={auth} />}>
             <Route path="/" element={<LandingPage />} />
             <Route path="/forgotpassword" element={<ForgotPassword />} />
           </Route>
-          <Route element={<AuthOutlet isAuthenticated={isAuthenticated} />}>
+          <Route element={<AuthOutlet isAuthenticated={auth} />}>
             <Route path="reports" element={<ReportsPage />} />
             <Route path="settings" element={<SettingsPage />} />
           </Route>
         </Routes>
-        {isAuthenticated && <Navbar />}
+        {auth && <Navbar />}
       </Router>
     </ThemeProvider>
   );

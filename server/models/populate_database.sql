@@ -1,37 +1,3 @@
-CREATE TABLE users (
-  id SERIAL PRIMARY KEY NOT NULL,
-  last_name VARCHAR(50) NOT NULL,
-  first_name VARCHAR(50) NOT NULL,
-  email VARCHAR(255) UNIQUE NOT NULL,
-  password VARCHAR(50) NOT NULL,
-  city VARCHAR(50) NOT NULL,
-  state_province VARCHAR(50) NOT NULL,
-  country VARCHAR(50) NOT NULL
-);
-
-CREATE TABLE categories (
-  id INT PRIMARY KEY NOT NULL,
-  label VARCHAR(30) NOT NULL
-);
-
-CREATE TABLE reports (
-  id SERIAL PRIMARY KEY NOT NULL,
-  user_id INT REFERENCES users (id) NOT NULL,
-  category_id INT REFERENCES categories (id) NOT NULL,
-  description TEXT NOT NULL,
-  report_time TIMESTAMP(0) WITH TIME ZONE NOT NULL,
-  address VARCHAR(255) NOT NULL,
-  longitude DECIMAL(9,6) NOT NULL,
-  latitude DECIMAL(8,6) NOT NULL,
-  UNIQUE (user_id, report_time)
-);
-
-CREATE TABLE images (
-  report_id INT REFERENCES reports (id) NOT NULL,
-  image_url text NOT NULL,
-  UNIQUE (report_id, image_url)
-);
-
 INSERT INTO users (last_name, first_name, email, password, city, state_province, country) VALUES ('Last', 'First', 'test@test.com', 'test', 'Vancouver', 'BC', 'Canada');
 
 INSERT INTO categories (id, label) VALUES (1, 'Drainage/Flooding');

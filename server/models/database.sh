@@ -19,9 +19,9 @@ while true; do
       printf "END -d | --delete\n"
       shift;;
     -r|--reset)
-      psql -U postgres -c 'DROP DATABASE citizenapp;' -c 'CREATE DATABASE citizenapp;' -c '\c citizenapp' -c '\i ./create_database.sql' -c '\c citizenapp' -c '\i ./populate_database.sql'
+      psql -U postgres -c 'DROP DATABASE citizenapp;' -c 'CREATE DATABASE citizenapp;' -c '\c citizenapp' -c '\i ./create_database.sql' -c '\i ./populate_database.sql'
       printf "END -r | --reset\n"
-      break;;
+      shift;;
     '')
       printf "\nNo remaining flags.\nEND database.sh\n"
       exit 1;;

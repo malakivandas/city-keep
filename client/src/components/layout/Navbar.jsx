@@ -1,10 +1,18 @@
 import React from 'react';
 
-import { AppBar, Toolbar, IconButton, Box, Fab } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import MenuIcon from '@mui/icons-material/Menu';
-import AddIcon from '@mui/icons-material/Add';
-import SettingsIcon from '@mui/icons-material/Settings';
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Box,
+  Fab,
+} from '@mui/material';
+import {
+  Menu as MenuIcon,
+  Add as AddIcon,
+  Settings as SettingsIcon,
+} from '@mui/icons-material';
 
 const StyledFab = styled(Fab)({
   position: 'absolute',
@@ -17,7 +25,11 @@ const StyledFab = styled(Fab)({
 
 export default function Navbar() {
   return (
-    <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
+    <AppBar
+      position="fixed"
+      color="primary"
+      sx={{ top: 'auto', bottom: 0 }}
+    >
       <Toolbar>
         <IconButton href="/reports" color="inherit">
           <MenuIcon />

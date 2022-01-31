@@ -1,5 +1,9 @@
-import React, {useState} from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme.jsx';
 
@@ -16,19 +20,24 @@ import AuthSwitch from './components/dev/AuthSwitch.jsx';
 
 function App() {
   const [auth, setAuth] = useState(false);
-  const handleAuth = (event) =>{
+  const handleAuth = (event) => {
     setAuth(event.target.checked);
-  }
+  };
 
   return (
     <ThemeProvider theme={theme}>
       <Router>
         {!auth && <Heading />}
-        <AuthSwitch checked={auth} onChange={handleAuth}/>
+        <AuthSwitch checked={auth} onChange={handleAuth} />
         <Routes>
-          <Route element={<NoAuthOutlet isAuthenticated={auth} />}>
+          <Route
+            element={<NoAuthOutlet isAuthenticated={auth} />}
+          >
             <Route path="/" element={<LandingPage />} />
-            <Route path="/forgotpassword" element={<ForgotPassword />} />
+            <Route
+              path="/forgotpassword"
+              element={<ForgotPassword />}
+            />
           </Route>
           <Route element={<AuthOutlet isAuthenticated={auth} />}>
             <Route path="reports" element={<ReportsPage />} />

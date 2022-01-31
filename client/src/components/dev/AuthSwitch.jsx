@@ -1,19 +1,25 @@
-import React from "react";
-import { styled } from "@mui/material/styles";
+import React from 'react';
 
-import Switch from "@mui/material/Switch";
+import { styled } from '@mui/material/styles';
+import { Switch } from '@mui/material';
 
 const StyledSwitch = styled(Switch)({
-  position: "absolute",
+  position: 'absolute',
   zIndex: 1,
   top: 0,
   right: 0,
 });
 
 const AuthSwitch = (props) => {
-  const {checked, onChange} = props;
+  const { checked, onChange } = props;
 
-  return <StyledSwitch checked={checked} onChange={onChange} color='secondary' />;
+  return (
+    <StyledSwitch
+      checked={checked}
+      onChange={onChange}
+      color="secondary"
+    />
+  );
 };
 
 export default AuthSwitch;

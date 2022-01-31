@@ -1,27 +1,30 @@
 import React from 'react';
 
-import Link from '@mui/material/Link';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
+import {
+  Link,
+  Button,
+  TextField,
+  FormControlLabel,
+  Checkbox,
+  Box,
+  Container,
+} from '@mui/material';
 
 export default function SignIn() {
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+
+    // AWS Cognito Sign In
   };
 
   return (
     <Container component="main" maxWidth="xs">
-      <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+      <Box
+        component="form"
+        onSubmit={handleSubmit}
+        noValidate
+        sx={{ mt: 1 }}
+      >
         <TextField
           margin="normal"
           required

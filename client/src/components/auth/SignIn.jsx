@@ -10,7 +10,7 @@ import {
   Container,
 } from '@mui/material';
 
-export default function SignIn() {
+const SignIn = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -63,4 +63,6 @@ export default function SignIn() {
       </Box>
     </Container>
   );
-}
+};
+
+export default SignIn;

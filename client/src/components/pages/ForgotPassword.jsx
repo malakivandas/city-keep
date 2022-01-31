@@ -8,7 +8,7 @@ import {
   Typography,
 } from '@mui/material';
 
-export const ForgotPassword = () => {
+const ForgotPassword = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 

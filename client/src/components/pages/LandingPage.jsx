@@ -6,7 +6,7 @@ import SignUp from '../auth/SignUp';
 
 import { Grid, Tabs, Tab, Box } from '@mui/material';
 
-function TabPanel(props) {
+const TabPanel = (props) => {
   const { children, value, ...other } = props;
 
   return (
@@ -14,14 +14,14 @@ function TabPanel(props) {
       <Box sx={{ p: 3 }}>{children[value]}</Box>
     </div>
   );
-}
+};
 
 TabPanel.propTypes = {
   children: PropTypes.node,
   value: PropTypes.number.isRequired,
 };
 
-export const LandingPage = () => {
+const LandingPage = () => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {

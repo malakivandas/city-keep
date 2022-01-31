@@ -8,7 +8,7 @@ import {
   Typography,
 } from '@mui/material';
 
-export default function ButtonAppBar() {
+const ButtonAppBar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -28,4 +28,6 @@ export default function ButtonAppBar() {
       </AppBar>
     </Box>
   );
-}
+};
+
+export default ButtonAppBar;

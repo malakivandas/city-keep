@@ -18,7 +18,7 @@ import LandingPage from './components/pages/LandingPage';
 import ForgotPassword from './components/pages/ForgotPassword';
 import AuthSwitch from './components/dev/AuthSwitch.jsx';
 
-function App() {
+const App = () => {
   const [auth, setAuth] = useState(false);
   const handleAuth = (event) => {
     setAuth(event.target.checked);
@@ -48,6 +48,6 @@ function App() {
       </Router>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

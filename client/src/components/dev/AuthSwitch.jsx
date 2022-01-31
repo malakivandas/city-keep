@@ -10,9 +10,7 @@ const StyledSwitch = styled(Switch)({
   right: 0,
 });
 
-const AuthSwitch = (props) => {
-  const { checked, onChange } = props;
-
+const AuthSwitch = ({ checked, onChange }) => {
   return (
     <StyledSwitch
       checked={checked}

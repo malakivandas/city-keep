@@ -23,7 +23,7 @@ const StyledFab = styled(Fab)({
   margin: '0 auto',
 });
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <AppBar
       position="fixed"
@@ -44,4 +44,6 @@ export default function Navbar() {
       </Toolbar>
     </AppBar>
   );
-}
+};
+
+export default Navbar;

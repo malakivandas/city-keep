@@ -1,18 +1,18 @@
 {
-  "name": "citizen-app",
+  "name": "city-keep",
   "version": "1.0.0",
   "description": "This app is for the reporting of non-emergency civic issues to a centralized database.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/malakivandas/citizen-app.git"
+    "url": "git+https://github.com/malakivandas/city-keep.git"
   },
   "author": "Malaki Vandas",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/malakivandas/citizen-app/issues"
+    "url": "https://github.com/malakivandas/city-keep/issues"
   },
-  "homepage": "https://github.com/malakivandas/citizen-app#readme",
+  "homepage": "https://github.com/malakivandas/city-keep#readme",
   "scripts": {
     "postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
     "client": "npm start --prefix client",

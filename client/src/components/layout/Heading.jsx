@@ -21,7 +21,7 @@ const ButtonAppBar = () => {
                 textTransform: 'none',
               }}
             >
-              CitiZen
+              CityKeep
             </Typography>
           </Link>
         </Toolbar>

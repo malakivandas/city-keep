@@ -2,7 +2,7 @@ import { createTheme } from '@mui/material/styles';
 
 import LinkBehavior from './LinkBehaviour';
 
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     primary: {
       main: '#5ea170',
@@ -12,6 +12,9 @@ const theme = createTheme({
       contrastText: '#fff',
     },
   },
+});
+
+theme = createTheme(theme, {
   components: {
     MuiLink: {
       defaultProps: {

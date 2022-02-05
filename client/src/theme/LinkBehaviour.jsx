@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { createTheme } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom';
 
 const LinkBehavior = React.forwardRef((props, ref) => {
@@ -19,28 +18,4 @@ LinkBehavior.propTypes = {
   ]).isRequired,
 };
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#5ea170',
-    },
-    secondary: {
-      main: '#c0963f',
-      contrastText: '#fff',
-    },
-  },
-  components: {
-    MuiLink: {
-      defaultProps: {
-        component: LinkBehavior,
-      },
-    },
-    MuiButtonBase: {
-      defaultProps: {
-        LinkComponent: LinkBehavior,
-      },
-    },
-  },
-});
-
-export default theme;
+export default LinkBehavior;

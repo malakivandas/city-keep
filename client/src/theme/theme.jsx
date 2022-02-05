@@ -43,6 +43,12 @@ const theme = createTheme(preTheme, {
       defaultProps: {
         color: 'construction',
       },
+      styleOverrides: {
+        track: {
+          backgroundColor: preTheme.palette.construction.dark,
+          opacity: 0.6,
+        },
+      },
     },
   },
 });

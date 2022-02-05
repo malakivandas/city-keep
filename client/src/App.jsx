@@ -5,7 +5,7 @@ import {
   Route,
 } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
-import theme from './theme.jsx';
+import theme from './theme/theme.jsx';
 
 //Components
 import Navbar from './components/layout/Navbar';

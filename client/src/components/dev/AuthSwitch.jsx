@@ -15,7 +15,7 @@ const AuthSwitch = ({ checked, onChange }) => {
     <StyledSwitch
       checked={checked}
       onChange={onChange}
-      color="secondary"
+      color="construction"
     />
   );
 };

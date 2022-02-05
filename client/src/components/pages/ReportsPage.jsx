@@ -1,9 +1,11 @@
 import React from 'react';
 
+import { Typography } from '@mui/material';
+
 const ReportsPage = () => {
   return (
     <div>
-      <h1>Reports Page</h1>
+      <Typography variant="h1">Reports Page</Typography>
     </div>
   );
 };

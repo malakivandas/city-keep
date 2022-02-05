@@ -2,19 +2,32 @@ import { createTheme } from '@mui/material/styles';
 
 import LinkBehavior from './LinkBehaviour';
 
-let theme = createTheme({
+const preTheme = createTheme({
   palette: {
     primary: {
       main: '#5ea170',
     },
     secondary: {
-      main: '#c0963f',
+      main: '#ff9800',
       contrastText: '#fff',
+    },
+    construction: {
+      main: '#00838f',
+      light: '#4fb3bf',
+      dark: '#005662',
+      constrastText: '#fff',
+    },
+  },
+  typography: {
+    h1: {
+      fontSize: '40px',
+      color: '#37474f',
+      padding: '15px',
     },
   },
 });
 
-theme = createTheme(theme, {
+const theme = createTheme(preTheme, {
   components: {
     MuiLink: {
       defaultProps: {

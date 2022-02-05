@@ -11,13 +11,7 @@ const StyledSwitch = styled(Switch)({
 });
 
 const AuthSwitch = ({ checked, onChange }) => {
-  return (
-    <StyledSwitch
-      checked={checked}
-      onChange={onChange}
-      color="construction"
-    />
-  );
+  return <StyledSwitch checked={checked} onChange={onChange} />;
 };
 
 export default AuthSwitch;

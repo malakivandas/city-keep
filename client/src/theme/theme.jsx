@@ -39,6 +39,11 @@ const theme = createTheme(preTheme, {
         LinkComponent: LinkBehavior,
       },
     },
+    MuiSwitch: {
+      defaultProps: {
+        color: 'construction',
+      },
+    },
   },
 });
 
